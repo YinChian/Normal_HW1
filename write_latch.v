@@ -8,19 +8,15 @@ module write_latch(
 );
 	
 	always@(posedge clk_50M,negedge reset_n)begin
-		if(!reset_n) begin
-			tx_data <= 8'h00;
-			start <= 1'b0;
-		end
-		else if(write)begin
-			tx_data <= write_data;
-			start <= 1'b1;
-		end
-		else begin
-			tx_data <= tx_data;
-			start <= start //Not Sure
-		end
+		if(!reset_n) tx_data <= 8'd0;
+		else if(write) tx_data <= write_data;
+		else tx_data <= tx_data;
 	end
 	
+	always@(posedge clk_50M,negedge reset_n)begin
+		if(!reset_n) start <= 1'b0;
+		else if(tx_data == write_data) start <= 1'b1;
+		else start <= 1'b0;
+	end
 	
 endmodule

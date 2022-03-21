@@ -38,8 +38,8 @@ module tx_time_gen(
 		//9600Hz_Outputer
 		always@(posedge clk_50M,negedge reset_n)begin
 			if(!reset_n) tick <= 1'b0;
-			else if(counter == 13'd5208) tick <= 1'b1;
-			else tick <= 1'b0;
+			else if(counter == 13'd5208) tick <= 1'b1;				//carry_out -> pulse
+			else tick <= 1'b0;												//else set 0
 		end
 		
 		

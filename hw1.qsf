@@ -52,3 +52,5 @@ set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY ON -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name VERILOG_FILE tx_time_gen.v
+set_global_assignment -name VERILOG_FILE shift_reg.v
+set_global_assignment -name VERILOG_FILE hw1.v

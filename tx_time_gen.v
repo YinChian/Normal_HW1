@@ -2,12 +2,13 @@ module tx_time_gen(
 	input clk_50M,
 	input reset_n,
 	input start,
-	output reg tick
+	output reg tick,
+	output reg count
 );
 		
 		reg [12:0] counter;
 		reg [3:0] sent_counter;
-		reg count;
+		//reg count;
 		
 		//Count_Control - The counter
 		always@(posedge clk_50M,negedge reset_n)begin
@@ -20,11 +21,10 @@ module tx_time_gen(
 		//Count_Control - The Final Switch
 		always@(posedge clk_50M,negedge reset_n)begin
 			if(!reset_n) count <= 1'b0;
-			else begin
-				if(sent_counter == 4'd11) count <= 1'b0;				//count to 11 -> stop
-				else if(start) count <= 1'b1;								//start signal ->run
-				else count <= count;											//latch
-			end			
+			else if(sent_counter == 4'd11) count <= 1'b0;				//count to 11 -> stop
+			else if(start) count <= 1'b1;								//start signal ->run
+			else count <= count;											//latch
+						
 		end
 		
 		//9600Hz_Counter
@@ -36,9 +36,8 @@ module tx_time_gen(
 		end
 		
 		//9600Hz_Outputer
-		always@(posedge clk_50M,negedge reset_n)begin
-			if(!reset_n) tick <= 1'b0;
-			else if(counter == 13'd5208) tick <= 1'b1;				//carry_out -> pulse
+		always@(*)begin
+			if(counter == 13'd5208) tick <= 1'b1;				//carry_out -> pulse
 			else tick <= 1'b0;												//else set 0
 		end
 		

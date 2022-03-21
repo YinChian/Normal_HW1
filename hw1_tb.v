@@ -22,6 +22,9 @@ wire read_error;
 wire read_complete;
 wire [7:0] read_value;
 
+wire tick;
+wire run;
+
 hw1 u1 (
     .clk_50M(clk_50M),
     .reset_n(reset_n),
@@ -32,7 +35,11 @@ hw1 u1 (
     .read_complete(read_complete),
     .read_error(read_error),
     .read_value(read_value),
-    .uart_rxd(uart_rxd)
+    .uart_rxd(uart_rxd),
+	 
+	 //Debug
+	 .tick(tick),
+	 .run(run)
     );
 
 always

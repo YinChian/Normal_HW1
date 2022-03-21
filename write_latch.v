@@ -3,8 +3,8 @@ module write_latch(
 	input reset_n,
 	input write,
 	input [7:0] write_data,
-	output start,
-	output [7:0] tx_data
+	output reg start,
+	output reg [7:0] tx_data
 );
 	
 	always@(posedge clk_50M,negedge reset_n)begin

@@ -1,18 +1,20 @@
 module shift_reg(
-	input CLK_50M,
-	input RESET_N,
-	input enabale,
+	input clk_50M,
+	input reset_n,
+	input enable,
 	input d_in,
 	input [10:0] load,
 	input load_en,
-	output reg [10:0] data
+	output [10:0] data_out,
+	output out
 );
-	
-	if(posedge CLK_50M,negedge RESET_N)begin
-		if(!RESET_N) data <= 11'h000;
+	reg [11:0] data;
+	always@(posedge clk_50M,negedge reset_n)begin
+		if(!reset_n) data <= 12'h000;
 		else if(load_en) data <= load;
-		else if(enable) data <= {d_in,data[10:1]};
+		else if(enable) data <= {d_in,data[11:1]};
 		else data <= data;
 	end
 	
+	assign {data_out,out} = data;
 endmodule 

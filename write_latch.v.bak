@@ -1,0 +1,12 @@
+module write_latch(
+	input clk_50M,
+	input reset_n,
+	input write,
+	input [7:0] write_data,
+	output start,
+	output [7:0] tx_data
+);
+	
+	
+
+endmodule

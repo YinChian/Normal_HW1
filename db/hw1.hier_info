@@ -1,0 +1,5 @@
+|hw1
+CLK_50M => ~NO_FANOUT~
+RESET_N => ~NO_FANOUT~
+
+

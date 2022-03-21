@@ -1,0 +1,13 @@
+module transmitify(
+	input clk_50M,
+	input reset_n,
+	input [7:0] orig_data,
+	output reg [10:0] out_data
+);
+
+	always@(posedge clk,negedge reset_n)begin
+		if(!reset_n) out_data <= 11'h000;
+		else out_data <= {1'b0,orig_data}
+	end
+
+endmodule

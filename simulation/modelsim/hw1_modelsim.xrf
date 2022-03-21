@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, D:/Digital_Logic_Design/Normal/Homework 1/hw1_tb.v
+source_file = 1, D:/Digital_Logic_Design/Normal/Homework 1/hw1.v
+source_file = 1, D:/Digital_Logic_Design/Normal/Homework 1/db/hw1.cbx.xml
+design_name = hw1
+instance = comp, \CLK_50M~input , CLK_50M~input, hw1, 1
+instance = comp, \RESET_N~input , RESET_N~input, hw1, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

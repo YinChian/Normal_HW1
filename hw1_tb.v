@@ -29,6 +29,7 @@ wire [3:0] ticked;
 wire [7:0] tx_data;
 wire [10:0] out_data;
 wire [10:0] data;
+wire [3:0] ticked_r;
 
 hw1 u1 (
     .clk_50M(clk_50M),
@@ -49,7 +50,8 @@ hw1 u1 (
 	 .ticked(ticked),
 	 .tx_data(tx_data),
 	 .out_data(out_data),
-	 .data(data)
+	 .data(data),
+	 .ticked_r(ticked_r)
     );
 
 always

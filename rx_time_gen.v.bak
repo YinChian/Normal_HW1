@@ -1,0 +1,19 @@
+module rx_time_gen(
+	input clk_50M,
+	input reset_n,
+	output tick
+);
+	
+	reg [12:0] counter; 
+	always@(posedge clk_50M,negedge reset_n)begin
+		if(!reset_n)  counter <= 13'd0;
+		else if(count == 13'd5208) counter <= 13'd0;
+		else count <= counter + 13'd1;
+	end
+	
+	always@(*)begin
+		if(count == 13'd5208) tick <= 1'b1;
+		else tick <= 1'b0;
+	end
+	
+endmodule 

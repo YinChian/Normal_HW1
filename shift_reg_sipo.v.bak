@@ -1,0 +1,13 @@
+shift_reg_sipo(
+	input clk_50M,
+	input reset_n,
+	input uart_rxd,
+	input tick,
+	output start_bit,
+	output [7:0] data,
+	output priority_bit
+);
+
+	
+	
+endmodule 

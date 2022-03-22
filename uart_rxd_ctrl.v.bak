@@ -1,0 +1,13 @@
+module uart_rxd_ctrl(
+	input clk_50M,
+	input reset_n,
+	input tick,
+	input uart_rxd,
+	output [7:0] read_value,
+	output read_error,
+	output read_complete
+);
+	
+	
+
+endmodule 

@@ -17,8 +17,11 @@ module hw1(
 	
 	output [7:0]  tx_data,
 	output [10:0] out_data,
-	output [10:0] data
+	output [10:0] data,
+	output [3:0] ticked_r
 );
+	
+	//// The Transmit Part ////
 	
 	//wire start;
 	//wire [7:0] tx_data;
@@ -76,6 +79,47 @@ module hw1(
 		
 		.out_data(out_data),
 		.data(data)
+		
+	);
+	
+	
+	//// The Receive Part ////
+	wire tick_r;
+	rx_time_gen timer(
+		
+		//Basics
+		.clk_50M(clk_50M),
+		.reset_n(reset_n),
+		
+		//start && full -> start
+		.start(uart_rxd),
+		
+		//Timer
+		.tick(tick_r),
+		
+		
+		.ticked(ticked_r),
+		
+		
+		.full(read_complete)
+		
+	);
+	
+	uart_rxd_ctrl receive_control(
+		
+		//Basics
+		.clk_50M(clk_50M),
+		.reset_n(reset_n),
+		
+		.tick(tick_r),
+		
+		.uart_rxd(uart_rxd),
+		
+		.read_value(read_value),
+		
+		.read_error(read_error),
+		
+		.full(read_complete)
 		
 	);
 

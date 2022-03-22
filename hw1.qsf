@@ -70,4 +70,7 @@ set_global_assignment -name VERILOG_FILE shift_reg.v
 set_global_assignment -name VERILOG_FILE hw1_tb.v
 set_global_assignment -name VERILOG_FILE hw1.v
 set_global_assignment -name VERILOG_FILE uart_txd_ctrl.v
+set_global_assignment -name VERILOG_FILE rx_time_gen.v
+set_global_assignment -name VERILOG_FILE shift_reg_sipo.v
+set_global_assignment -name VERILOG_FILE uart_rxd_ctrl.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

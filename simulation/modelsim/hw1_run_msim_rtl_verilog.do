@@ -12,6 +12,9 @@ vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1
 vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/shift_reg.v}
 vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/hw1.v}
 vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/uart_txd_ctrl.v}
+vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/rx_time_gen.v}
+vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/shift_reg_sipo.v}
+vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/uart_rxd_ctrl.v}
 
 vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/hw1_tb.v}
 

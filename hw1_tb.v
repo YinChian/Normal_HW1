@@ -24,6 +24,11 @@ wire [7:0] read_value;
 
 wire tick;
 wire run;
+wire start;
+wire [3:0] ticked;
+wire [7:0] tx_data;
+wire [10:0] out_data;
+wire [10:0] data;
 
 hw1 u1 (
     .clk_50M(clk_50M),
@@ -39,7 +44,12 @@ hw1 u1 (
 	 
 	 //Debug
 	 .tick(tick),
-	 .run(run)
+	 .run(run),
+	 .start(start),
+	 .ticked(ticked),
+	 .tx_data(tx_data),
+	 .out_data(out_data),
+	 .data(data)
     );
 
 always

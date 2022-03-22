@@ -2,45 +2,47 @@ module tx_time_gen(
 	input clk_50M,
 	input reset_n,
 	input start,
+	output reg [3:0] ticked,
 	output reg tick,
-	output reg count
-);
+	output  count
+);	
 		
+		reg count_enable;
+		//reg [3:0] ticked;
 		reg [12:0] counter;
-		reg [3:0] sent_counter;
-		//reg count;
-		
-		//Count_Control - The counter
 		always@(posedge clk_50M,negedge reset_n)begin
-			if(!reset_n) sent_counter <= 4'd0;						  //reset
-			else if(tick) sent_counter <= sent_counter + 4'd1;	  //tick = +1
-			else if(sent_counter == 4'd11) sent_counter <= 4'd0; //carry_out
-			else sent_counter <= sent_counter;						  //latch
+			if(!reset_n) counter <= 13'd0;
+			else if(count_enable)begin	//count_enable
+				if(counter == 13'd5208)	counter <= 13'd0;
+				else counter <= counter + 13'd1;
+			end 
+			else begin
+				counter <= counter;
+			end
 		end
-		
-		//Count_Control - The Final Switch
+	
 		always@(posedge clk_50M,negedge reset_n)begin
-			if(!reset_n) count <= 1'b0;
-			else if(sent_counter == 4'd11) count <= 1'b0;				//count to 11 -> stop
-			else if(start) count <= 1'b1;								//start signal ->run
-			else count <= count;											//latch
-						
-		end
+			if(!reset_n) tick <= 1'b0;
+			else if(counter == 13'd5208) tick <= 1'b1;
+			else tick <= 1'b0;
+		end	
 		
-		//9600Hz_Counter
+		//Monitoring
 		always@(posedge clk_50M,negedge reset_n)begin
-			if(!reset_n) counter <= 13'd0;								//reset
-			else if(counter == 13'd5208)	counter <=  13'd0;		//carry_out
-			else if(count) counter <= counter + 13'd1;				//count = +1
-			else count <= count;												//latch
+			if(!reset_n) ticked <= 4'd0;
+			else if(ticked == 4'd11) ticked <= 4'd0;
+			else if(tick) ticked <= ticked + 4'd1;
+			else if(start) ticked <= 4'd0;
+			else ticked <= ticked;
+		end 
+		
+		always@(posedge clk_50M,negedge reset_n)begin
+			if(!reset_n) count_enable <= 1'b0;
+			else if(ticked == 4'd11) count_enable <= 1'b0;
+			else if(start) count_enable <= 1'b1;
+			else count_enable <= count_enable;
 		end
 		
-		//9600Hz_Outputer
-		always@(*)begin
-			if(counter == 13'd5208) tick <= 1'b1;				//carry_out -> pulse
-			else tick <= 1'b0;												//else set 0
-		end
+		assign count = count_enable;
 		
-		
-
 endmodule

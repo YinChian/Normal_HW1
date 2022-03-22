@@ -11,11 +11,17 @@ module hw1(
 	output [7:0] read_value,
 	
 	output tick,
-	output run
+	output run,
+	output start,
+	output [3:0] ticked,
+	
+	output [7:0]  tx_data,
+	output [10:0] out_data,
+	output [10:0] data
 );
 	
-	wire start;
-	wire [7:0] tx_data;
+	//wire start;
+	//wire [7:0] tx_data;
 	write_latch dataInput(
 		
 		//Basics
@@ -24,7 +30,7 @@ module hw1(
 		
 		//Write_Inputs
 		.write(write),		
-		.write_data(write_data),
+		.write_data(write_value),
 		
 		//Outputs
 		.start(start),
@@ -43,6 +49,8 @@ module hw1(
 		
 		//Pulse
 		.tick(tick),
+		
+		.ticked(ticked),
 		
 		.count(run)
 		
@@ -64,7 +72,10 @@ module hw1(
 		.start(start),
 		
 		//Data_Output
-		.out(uart_txd)
+		.out(uart_txd),
+		
+		.out_data(out_data),
+		.data(data)
 		
 	);
 

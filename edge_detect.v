@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 module edge_detect (
    clk,
    rst_n,

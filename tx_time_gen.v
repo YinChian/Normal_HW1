@@ -1,14 +1,11 @@
 module tx_time_gen(
 	input clk_50M,
 	input reset_n,
-	input start,
-	output reg [3:0] ticked,
-	output reg tick,
-	output  count
+	input start,		//Input for Trigger Counter
+	output reg tick	//9600Hz output for tx
 );	
-		
+		reg [3:0] ticked;
 		reg count_enable;
-		//reg [3:0] ticked;
 		reg [12:0] counter;
 		always@(posedge clk_50M,negedge reset_n)begin
 			if(!reset_n) counter <= 13'd0;
@@ -43,6 +40,5 @@ module tx_time_gen(
 			else count_enable <= count_enable;
 		end
 		
-		assign count = count_enable;
 		
 endmodule

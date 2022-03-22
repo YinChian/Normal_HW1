@@ -1,30 +1,24 @@
 module hw1(
+	
+	//TxD Part
 	input clk_50M,
 	input reset_n,
 	input [7:0] write_value,
 	input write,
 	output uart_txd,
 	
+	//RxD Part
 	input uart_rxd,
 	output read_error,
 	output read_complete,
-	output [7:0] read_value,
+	output [7:0] read_value
 	
-	output tick,
-	output run,
-	output start,
-	output [3:0] ticked,
-	
-	output [7:0]  tx_data,
-	output [10:0] out_data,
-	output [10:0] data,
-	output [3:0] ticked_r
 );
 	
 	//// The Transmit Part ////
 	
-	//wire start;
-	//wire [7:0] tx_data;
+	wire start;
+	wire [7:0] tx_data;
 	write_latch dataInput(
 		
 		//Basics
@@ -40,7 +34,8 @@ module hw1(
 		.tx_data(tx_data)
 	);
 	
-	//wire tick;
+	wire run;
+	wire tick;
 	tx_time_gen alt_clk(
 		
 		//Basics
@@ -51,14 +46,12 @@ module hw1(
 		.start(start),
 		
 		//Pulse
-		.tick(tick),
-		
-		.ticked(ticked),
-		
-		.count(run)
+		.tick(tick)
 		
 	);
 	
+	wire [7:0] out_data;
+	wire [10:0] data;
 	uart_txd_ctrl transmit_control(
 		
 		//Basics
@@ -75,15 +68,14 @@ module hw1(
 		.start(start),
 		
 		//Data_Output
-		.out(uart_txd),
-		
-		.out_data(out_data),
-		.data(data)
+		.out(uart_txd)
 		
 	);
 	
 	
 	//// The Receive Part ////
+	
+	wire [3:0] ticked_r;
 	wire tick_r;
 	rx_time_gen timer(
 		
@@ -97,10 +89,7 @@ module hw1(
 		//Timer
 		.tick(tick_r),
 		
-		
-		.ticked(ticked_r),
-		
-		
+		//Complete_out
 		.full(read_complete)
 		
 	);
@@ -111,14 +100,17 @@ module hw1(
 		.clk_50M(clk_50M),
 		.reset_n(reset_n),
 		
+		//9600Hz RxD frequence input
 		.tick(tick_r),
 		
+		//RxD input from Testbench
 		.uart_rxd(uart_rxd),
 		
+		//Outputs
 		.read_value(read_value),
-		
 		.read_error(read_error),
 		
+		//Input the read_complete signal to enable output
 		.full(read_complete)
 		
 	);

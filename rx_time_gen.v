@@ -1,15 +1,13 @@
 module rx_time_gen(
 	input clk_50M,
 	input reset_n,
-	input start,
-	
-	output reg [3:0] ticked,
-	output reg tick,
-	output full
+	input start,		//Trigger
+	output reg tick,	//9600Hz out
+	output full			//Receive is Complete
 );	
 		
 		reg count_enable;
-		//reg [3:0] ticked;
+		reg [3:0] ticked;
 		reg [12:0] counter;
 		always@(posedge clk_50M,negedge reset_n)begin
 			if(!reset_n) counter <= 13'd0;
@@ -34,14 +32,14 @@ module rx_time_gen(
 			if(!reset_n) ticked <= 4'd0;
 			else if(ticked == 4'd11) ticked <= 4'd0;
 			else if(tick) ticked <= ticked + 4'd1;
-			else if(!start && full) ticked <= 4'd0;
+			else if(!start && full) ticked <= 4'd0; //
 			else ticked <= ticked;
 		end 
 		
 		always@(posedge clk_50M,negedge reset_n)begin
 			if(!reset_n) count_enable <= 1'b0;
 			else if(ticked == 4'd11) count_enable <= 1'b0;
-			else if(!start && full) count_enable <= 1'b1;
+			else if(!start && full) count_enable <= 1'b1; //
 			else count_enable <= count_enable;
 		end
 		

@@ -17,8 +17,8 @@ module write_latch(
 	edge_detect detect(
 		.clk(clk_50M),
 		.rst_n(reset_n),
-		.data_in(write),
-		.pos_edge(start)
+		.data_in(write),	//Input
+		.pos_edge(start)	//Output
 	);
 	
 	

@@ -12,119 +12,119 @@
 # 
 # vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/edge_detect.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:35:11 on Mar 22,2022
+# Start time: 01:00:57 on Mar 23,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Digital_Logic_Design/Normal/Homework 1" D:/Digital_Logic_Design/Normal/Homework 1/edge_detect.v 
 # -- Compiling module edge_detect
 # 
 # Top level modules:
 # 	edge_detect
-# End time: 23:35:11 on Mar 22,2022, Elapsed time: 0:00:00
+# End time: 01:00:57 on Mar 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/write_latch.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:35:11 on Mar 22,2022
+# Start time: 01:00:57 on Mar 23,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Digital_Logic_Design/Normal/Homework 1" D:/Digital_Logic_Design/Normal/Homework 1/write_latch.v 
 # -- Compiling module write_latch
 # 
 # Top level modules:
 # 	write_latch
-# End time: 23:35:11 on Mar 22,2022, Elapsed time: 0:00:00
+# End time: 01:00:57 on Mar 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/tx_time_gen.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:35:11 on Mar 22,2022
+# Start time: 01:00:57 on Mar 23,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Digital_Logic_Design/Normal/Homework 1" D:/Digital_Logic_Design/Normal/Homework 1/tx_time_gen.v 
 # -- Compiling module tx_time_gen
 # 
 # Top level modules:
 # 	tx_time_gen
-# End time: 23:35:11 on Mar 22,2022, Elapsed time: 0:00:00
+# End time: 01:00:57 on Mar 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/transmittify.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:35:11 on Mar 22,2022
+# Start time: 01:00:57 on Mar 23,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Digital_Logic_Design/Normal/Homework 1" D:/Digital_Logic_Design/Normal/Homework 1/transmittify.v 
 # -- Compiling module transmittify
 # 
 # Top level modules:
 # 	transmittify
-# End time: 23:35:12 on Mar 22,2022, Elapsed time: 0:00:01
+# End time: 01:00:57 on Mar 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/shift_reg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:35:12 on Mar 22,2022
+# Start time: 01:00:57 on Mar 23,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Digital_Logic_Design/Normal/Homework 1" D:/Digital_Logic_Design/Normal/Homework 1/shift_reg.v 
 # -- Compiling module shift_reg
 # 
 # Top level modules:
 # 	shift_reg
-# End time: 23:35:12 on Mar 22,2022, Elapsed time: 0:00:00
+# End time: 01:00:57 on Mar 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/hw1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:35:12 on Mar 22,2022
+# Start time: 01:00:57 on Mar 23,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Digital_Logic_Design/Normal/Homework 1" D:/Digital_Logic_Design/Normal/Homework 1/hw1.v 
 # -- Compiling module hw1
 # 
 # Top level modules:
 # 	hw1
-# End time: 23:35:12 on Mar 22,2022, Elapsed time: 0:00:00
+# End time: 01:00:57 on Mar 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/uart_txd_ctrl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:35:12 on Mar 22,2022
+# Start time: 01:00:57 on Mar 23,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Digital_Logic_Design/Normal/Homework 1" D:/Digital_Logic_Design/Normal/Homework 1/uart_txd_ctrl.v 
 # -- Compiling module uart_txd_ctrl
 # 
 # Top level modules:
 # 	uart_txd_ctrl
-# End time: 23:35:12 on Mar 22,2022, Elapsed time: 0:00:00
+# End time: 01:00:58 on Mar 23,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/rx_time_gen.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:35:12 on Mar 22,2022
+# Start time: 01:00:58 on Mar 23,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Digital_Logic_Design/Normal/Homework 1" D:/Digital_Logic_Design/Normal/Homework 1/rx_time_gen.v 
 # -- Compiling module rx_time_gen
 # 
 # Top level modules:
 # 	rx_time_gen
-# End time: 23:35:12 on Mar 22,2022, Elapsed time: 0:00:00
+# End time: 01:00:58 on Mar 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/shift_reg_sipo.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:35:12 on Mar 22,2022
+# Start time: 01:00:58 on Mar 23,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Digital_Logic_Design/Normal/Homework 1" D:/Digital_Logic_Design/Normal/Homework 1/shift_reg_sipo.v 
 # -- Compiling module shift_reg_sipo
 # 
 # Top level modules:
 # 	shift_reg_sipo
-# End time: 23:35:12 on Mar 22,2022, Elapsed time: 0:00:00
+# End time: 01:00:58 on Mar 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/uart_rxd_ctrl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:35:12 on Mar 22,2022
+# Start time: 01:00:58 on Mar 23,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Digital_Logic_Design/Normal/Homework 1" D:/Digital_Logic_Design/Normal/Homework 1/uart_rxd_ctrl.v 
 # -- Compiling module uart_rxd_ctrl
 # 
 # Top level modules:
 # 	uart_rxd_ctrl
-# End time: 23:35:12 on Mar 22,2022, Elapsed time: 0:00:00
+# End time: 01:00:58 on Mar 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+D:/Digital_Logic_Design/Normal/Homework\ 1 {D:/Digital_Logic_Design/Normal/Homework 1/hw1_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:35:12 on Mar 22,2022
+# Start time: 01:00:58 on Mar 23,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Digital_Logic_Design/Normal/Homework 1" D:/Digital_Logic_Design/Normal/Homework 1/hw1_tb.v 
 # -- Compiling module hw1_tb
 # 
 # Top level modules:
 # 	hw1_tb
-# End time: 23:35:12 on Mar 22,2022, Elapsed time: 0:00:00
+# End time: 01:00:58 on Mar 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  hw1_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" hw1_tb 
-# Start time: 23:35:12 on Mar 22,2022
+# Start time: 01:00:59 on Mar 23,2022
 # Loading work.hw1_tb
 # Loading work.hw1
 # Loading work.write_latch
@@ -143,15 +143,15 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: 91kev  Hostname: SONIC-THE-HEDGE  ProcessID: 12728
-#           Attempting to use alternate WLF file "./wlftwbg1t9".
+#           Attempting to use alternate WLF file "./wlftk1e9ni".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftwbg1t9
+#           Using alternate file: ./wlftk1e9ni
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# time =  10,read_value = 00,read_error = 1,read_complete = 1
+# time =  10,read_value = 00,read_error = 0,read_complete = 1
 # time = 235,reset_n = 1,write = 1,write_value = 12
 # time = 1094490,uart_rx data = 12 ,parity = 0 (OK)
 # time = 1501092,reset_n = 1,write = 1,write_value = 34
@@ -159,15 +159,14 @@
 # time = 2901810,reset_n = 1,write = 1,write_value = 56
 # time = 3995726,uart_rx data = 56 ,parity = 0 (OK)
 # time = 5401983,send_uart data = 78 ,parity = 0
-# time = 6443830,read_value = 78,read_error = 1,read_complete = 1
+# time = 6443830,read_value = 78,read_error = 0,read_complete = 1
 # time = 7747809,send_uart data = 9a ,parity = 0
-# time = 8789610,read_value = 9a,read_error = 1,read_complete = 1
+# time = 8789610,read_value = 9a,read_error = 0,read_complete = 1
 # time = 10093635,send_uart data = bc ,parity = 1
-# time = 11135450,read_value = bc,read_error = 1,read_complete = 1
+# time = 11135450,read_value = bc,read_error = 0,read_complete = 1
 # time = 12439461,send_uart data = de ,parity = 1
-# time = 13481270,read_value = de,read_error = 0,read_complete = 1
-# ** Note: $stop    : D:/Digital_Logic_Design/Normal/Homework 1/hw1_tb.v(98)
+# time = 13481270,read_value = de,read_error = 1,read_complete = 1
+# ** Note: $stop    : D:/Digital_Logic_Design/Normal/Homework 1/hw1_tb.v(81)
 #    Time: 14785287 ns  Iteration: 0  Instance: /hw1_tb
-# Break in Module hw1_tb at D:/Digital_Logic_Design/Normal/Homework 1/hw1_tb.v line 98
-# End time: 23:36:26 on Mar 22,2022, Elapsed time: 0:01:14
-# Errors: 0, Warnings: 4
+# Break in Module hw1_tb at D:/Digital_Logic_Design/Normal/Homework 1/hw1_tb.v line 81
+# A time value could not be extracted from the current line

@@ -1,5 +1,5 @@
 Analysis & Elaboration report for hw1
-Tue Mar 22 23:35:01 2022
+Wed Mar 23 01:00:40 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Tue Mar 22 23:35:01 2022       ;
+; Analysis & Elaboration Status      ; Successful - Wed Mar 23 01:00:40 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; hw1                                         ;
 ; Top-level Entity Name              ; hw1                                         ;
@@ -171,7 +171,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 22 23:34:52 2022
+    Info: Processing started: Wed Mar 23 01:00:24 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hw1 -c hw1 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -198,23 +198,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file shift_r
 Info (12021): Found 1 design units, including 1 entities, in source file uart_rxd_ctrl.v
     Info (12023): Found entity 1: uart_rxd_ctrl File: D:/Digital_Logic_Design/Normal/Homework 1/uart_rxd_ctrl.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at edge_detect.v(18): created implicit net for "fail_pos_edge" File: D:/Digital_Logic_Design/Normal/Homework 1/edge_detect.v Line: 18
-Warning (10236): Verilog HDL Implicit Net warning at uart_rxd_ctrl.v(29): created implicit net for "priority_bit" File: D:/Digital_Logic_Design/Normal/Homework 1/uart_rxd_ctrl.v Line: 29
 Info (12127): Elaborating entity "hw1" for the top level hierarchy
-Info (12128): Elaborating entity "write_latch" for hierarchy "write_latch:dataInput" File: D:/Digital_Logic_Design/Normal/Homework 1/hw1.v Line: 41
+Info (12128): Elaborating entity "write_latch" for hierarchy "write_latch:dataInput" File: D:/Digital_Logic_Design/Normal/Homework 1/hw1.v Line: 35
 Info (12128): Elaborating entity "edge_detect" for hierarchy "write_latch:dataInput|edge_detect:detect" File: D:/Digital_Logic_Design/Normal/Homework 1/write_latch.v Line: 22
 Warning (10036): Verilog HDL or VHDL warning at edge_detect.v(18): object "fail_pos_edge" assigned a value but never read File: D:/Digital_Logic_Design/Normal/Homework 1/edge_detect.v Line: 18
-Info (12128): Elaborating entity "tx_time_gen" for hierarchy "tx_time_gen:alt_clk" File: D:/Digital_Logic_Design/Normal/Homework 1/hw1.v Line: 60
-Info (12128): Elaborating entity "uart_txd_ctrl" for hierarchy "uart_txd_ctrl:transmit_control" File: D:/Digital_Logic_Design/Normal/Homework 1/hw1.v Line: 83
-Info (12128): Elaborating entity "transmittify" for hierarchy "uart_txd_ctrl:transmit_control|transmittify:tidy" File: D:/Digital_Logic_Design/Normal/Homework 1/uart_txd_ctrl.v Line: 23
-Info (12128): Elaborating entity "shift_reg" for hierarchy "uart_txd_ctrl:transmit_control|shift_reg:shift" File: D:/Digital_Logic_Design/Normal/Homework 1/uart_txd_ctrl.v Line: 36
-Info (12128): Elaborating entity "rx_time_gen" for hierarchy "rx_time_gen:timer" File: D:/Digital_Logic_Design/Normal/Homework 1/hw1.v Line: 106
-Info (12128): Elaborating entity "uart_rxd_ctrl" for hierarchy "uart_rxd_ctrl:receive_control" File: D:/Digital_Logic_Design/Normal/Homework 1/hw1.v Line: 124
-Info (12128): Elaborating entity "shift_reg_sipo" for hierarchy "uart_rxd_ctrl:receive_control|shift_reg_sipo:shift_register" File: D:/Digital_Logic_Design/Normal/Homework 1/uart_rxd_ctrl.v Line: 31
+Info (12128): Elaborating entity "tx_time_gen" for hierarchy "tx_time_gen:alt_clk" File: D:/Digital_Logic_Design/Normal/Homework 1/hw1.v Line: 51
+Info (12128): Elaborating entity "uart_txd_ctrl" for hierarchy "uart_txd_ctrl:transmit_control" File: D:/Digital_Logic_Design/Normal/Homework 1/hw1.v Line: 73
+Info (12128): Elaborating entity "transmittify" for hierarchy "uart_txd_ctrl:transmit_control|transmittify:tidy" File: D:/Digital_Logic_Design/Normal/Homework 1/uart_txd_ctrl.v Line: 29
+Info (12128): Elaborating entity "shift_reg" for hierarchy "uart_txd_ctrl:transmit_control|shift_reg:shift" File: D:/Digital_Logic_Design/Normal/Homework 1/uart_txd_ctrl.v Line: 48
+Info (12128): Elaborating entity "rx_time_gen" for hierarchy "rx_time_gen:timer" File: D:/Digital_Logic_Design/Normal/Homework 1/hw1.v Line: 95
+Info (12128): Elaborating entity "uart_rxd_ctrl" for hierarchy "uart_rxd_ctrl:receive_control" File: D:/Digital_Logic_Design/Normal/Homework 1/hw1.v Line: 116
+Info (12128): Elaborating entity "shift_reg_sipo" for hierarchy "uart_rxd_ctrl:receive_control|shift_reg_sipo:shift_register" File: D:/Digital_Logic_Design/Normal/Homework 1/uart_rxd_ctrl.v Line: 30
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4710 megabytes
-    Info: Processing ended: Tue Mar 22 23:35:01 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Processing ended: Wed Mar 23 01:00:40 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:24
 
 

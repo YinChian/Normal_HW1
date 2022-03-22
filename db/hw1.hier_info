@@ -10,59 +10,18 @@ write_value[5] => write_value[5].IN1
 write_value[6] => write_value[6].IN1
 write_value[7] => write_value[7].IN1
 write => write.IN1
-uart_txd << uart_txd_ctrl:transmit_control.out
+uart_txd <= uart_txd_ctrl:transmit_control.out
 uart_rxd => uart_rxd.IN2
-read_error << uart_rxd_ctrl:receive_control.read_error
-read_complete << read_complete.DB_MAX_OUTPUT_PORT_TYPE
-read_value[0] << uart_rxd_ctrl:receive_control.read_value
-read_value[1] << uart_rxd_ctrl:receive_control.read_value
-read_value[2] << uart_rxd_ctrl:receive_control.read_value
-read_value[3] << uart_rxd_ctrl:receive_control.read_value
-read_value[4] << uart_rxd_ctrl:receive_control.read_value
-read_value[5] << uart_rxd_ctrl:receive_control.read_value
-read_value[6] << uart_rxd_ctrl:receive_control.read_value
-read_value[7] << uart_rxd_ctrl:receive_control.read_value
-tick << tick.DB_MAX_OUTPUT_PORT_TYPE
-run << tx_time_gen:alt_clk.count
-start << start.DB_MAX_OUTPUT_PORT_TYPE
-ticked[0] << tx_time_gen:alt_clk.ticked
-ticked[1] << tx_time_gen:alt_clk.ticked
-ticked[2] << tx_time_gen:alt_clk.ticked
-ticked[3] << tx_time_gen:alt_clk.ticked
-tx_data[0] << tx_data[0].DB_MAX_OUTPUT_PORT_TYPE
-tx_data[1] << tx_data[1].DB_MAX_OUTPUT_PORT_TYPE
-tx_data[2] << tx_data[2].DB_MAX_OUTPUT_PORT_TYPE
-tx_data[3] << tx_data[3].DB_MAX_OUTPUT_PORT_TYPE
-tx_data[4] << tx_data[4].DB_MAX_OUTPUT_PORT_TYPE
-tx_data[5] << tx_data[5].DB_MAX_OUTPUT_PORT_TYPE
-tx_data[6] << tx_data[6].DB_MAX_OUTPUT_PORT_TYPE
-tx_data[7] << tx_data[7].DB_MAX_OUTPUT_PORT_TYPE
-out_data[0] << uart_txd_ctrl:transmit_control.out_data
-out_data[1] << uart_txd_ctrl:transmit_control.out_data
-out_data[2] << uart_txd_ctrl:transmit_control.out_data
-out_data[3] << uart_txd_ctrl:transmit_control.out_data
-out_data[4] << uart_txd_ctrl:transmit_control.out_data
-out_data[5] << uart_txd_ctrl:transmit_control.out_data
-out_data[6] << uart_txd_ctrl:transmit_control.out_data
-out_data[7] << uart_txd_ctrl:transmit_control.out_data
-out_data[8] << uart_txd_ctrl:transmit_control.out_data
-out_data[9] << uart_txd_ctrl:transmit_control.out_data
-out_data[10] << uart_txd_ctrl:transmit_control.out_data
-data[0] << uart_txd_ctrl:transmit_control.data
-data[1] << uart_txd_ctrl:transmit_control.data
-data[2] << uart_txd_ctrl:transmit_control.data
-data[3] << uart_txd_ctrl:transmit_control.data
-data[4] << uart_txd_ctrl:transmit_control.data
-data[5] << uart_txd_ctrl:transmit_control.data
-data[6] << uart_txd_ctrl:transmit_control.data
-data[7] << uart_txd_ctrl:transmit_control.data
-data[8] << uart_txd_ctrl:transmit_control.data
-data[9] << uart_txd_ctrl:transmit_control.data
-data[10] << uart_txd_ctrl:transmit_control.data
-ticked_r[0] << rx_time_gen:timer.ticked
-ticked_r[1] << rx_time_gen:timer.ticked
-ticked_r[2] << rx_time_gen:timer.ticked
-ticked_r[3] << rx_time_gen:timer.ticked
+read_error <= uart_rxd_ctrl:receive_control.read_error
+read_complete <= read_complete.DB_MAX_OUTPUT_PORT_TYPE
+read_value[0] <= uart_rxd_ctrl:receive_control.read_value
+read_value[1] <= uart_rxd_ctrl:receive_control.read_value
+read_value[2] <= uart_rxd_ctrl:receive_control.read_value
+read_value[3] <= uart_rxd_ctrl:receive_control.read_value
+read_value[4] <= uart_rxd_ctrl:receive_control.read_value
+read_value[5] <= uart_rxd_ctrl:receive_control.read_value
+read_value[6] <= uart_rxd_ctrl:receive_control.read_value
+read_value[7] <= uart_rxd_ctrl:receive_control.read_value
 
 
 |hw1|write_latch:dataInput
@@ -100,10 +59,10 @@ neg_edge <= neg_edge.DB_MAX_OUTPUT_PORT_TYPE
 
 |hw1|tx_time_gen:alt_clk
 clk_50M => count_enable.CLK
-clk_50M => ticked[0]~reg0.CLK
-clk_50M => ticked[1]~reg0.CLK
-clk_50M => ticked[2]~reg0.CLK
-clk_50M => ticked[3]~reg0.CLK
+clk_50M => ticked[0].CLK
+clk_50M => ticked[1].CLK
+clk_50M => ticked[2].CLK
+clk_50M => ticked[3].CLK
 clk_50M => tick~reg0.CLK
 clk_50M => counter[0].CLK
 clk_50M => counter[1].CLK
@@ -131,23 +90,18 @@ reset_n => counter[9].ACLR
 reset_n => counter[10].ACLR
 reset_n => counter[11].ACLR
 reset_n => counter[12].ACLR
-reset_n => ticked[0]~reg0.ACLR
-reset_n => ticked[1]~reg0.ACLR
-reset_n => ticked[2]~reg0.ACLR
-reset_n => ticked[3]~reg0.ACLR
 reset_n => tick~reg0.ACLR
+reset_n => ticked[0].ACLR
+reset_n => ticked[1].ACLR
+reset_n => ticked[2].ACLR
+reset_n => ticked[3].ACLR
 reset_n => count_enable.ACLR
 start => ticked.OUTPUTSELECT
 start => ticked.OUTPUTSELECT
 start => ticked.OUTPUTSELECT
 start => ticked.OUTPUTSELECT
 start => count_enable.OUTPUTSELECT
-ticked[0] <= ticked[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ticked[1] <= ticked[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ticked[2] <= ticked[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ticked[3] <= ticked[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 tick <= tick~reg0.DB_MAX_OUTPUT_PORT_TYPE
-count <= count_enable.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |hw1|uart_txd_ctrl:transmit_control
@@ -164,28 +118,6 @@ tx_data[7] => tx_data[7].IN1
 tick => tick.IN1
 start => start.IN1
 out <= shift_reg:shift.out
-out_data[0] <= out_data[0].DB_MAX_OUTPUT_PORT_TYPE
-out_data[1] <= out_data[1].DB_MAX_OUTPUT_PORT_TYPE
-out_data[2] <= out_data[2].DB_MAX_OUTPUT_PORT_TYPE
-out_data[3] <= out_data[3].DB_MAX_OUTPUT_PORT_TYPE
-out_data[4] <= out_data[4].DB_MAX_OUTPUT_PORT_TYPE
-out_data[5] <= out_data[5].DB_MAX_OUTPUT_PORT_TYPE
-out_data[6] <= out_data[6].DB_MAX_OUTPUT_PORT_TYPE
-out_data[7] <= out_data[7].DB_MAX_OUTPUT_PORT_TYPE
-out_data[8] <= out_data[8].DB_MAX_OUTPUT_PORT_TYPE
-out_data[9] <= out_data[9].DB_MAX_OUTPUT_PORT_TYPE
-out_data[10] <= out_data[10].DB_MAX_OUTPUT_PORT_TYPE
-data[0] <= shift_reg:shift.data
-data[1] <= shift_reg:shift.data
-data[2] <= shift_reg:shift.data
-data[3] <= shift_reg:shift.data
-data[4] <= shift_reg:shift.data
-data[5] <= shift_reg:shift.data
-data[6] <= shift_reg:shift.data
-data[7] <= shift_reg:shift.data
-data[8] <= shift_reg:shift.data
-data[9] <= shift_reg:shift.data
-data[10] <= shift_reg:shift.data
 
 
 |hw1|uart_txd_ctrl:transmit_control|transmittify:tidy
@@ -223,28 +155,28 @@ valid_o <= valid_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |hw1|uart_txd_ctrl:transmit_control|shift_reg:shift
-clk_50M => data[0]~reg0.CLK
-clk_50M => data[1]~reg0.CLK
-clk_50M => data[2]~reg0.CLK
-clk_50M => data[3]~reg0.CLK
-clk_50M => data[4]~reg0.CLK
-clk_50M => data[5]~reg0.CLK
-clk_50M => data[6]~reg0.CLK
-clk_50M => data[7]~reg0.CLK
-clk_50M => data[8]~reg0.CLK
-clk_50M => data[9]~reg0.CLK
-clk_50M => data[10]~reg0.CLK
-reset_n => data[0]~reg0.ACLR
-reset_n => data[1]~reg0.ACLR
-reset_n => data[2]~reg0.ACLR
-reset_n => data[3]~reg0.ACLR
-reset_n => data[4]~reg0.ACLR
-reset_n => data[5]~reg0.ACLR
-reset_n => data[6]~reg0.ACLR
-reset_n => data[7]~reg0.ACLR
-reset_n => data[8]~reg0.ACLR
-reset_n => data[9]~reg0.ACLR
-reset_n => data[10]~reg0.ACLR
+clk_50M => data[0].CLK
+clk_50M => data[1].CLK
+clk_50M => data[2].CLK
+clk_50M => data[3].CLK
+clk_50M => data[4].CLK
+clk_50M => data[5].CLK
+clk_50M => data[6].CLK
+clk_50M => data[7].CLK
+clk_50M => data[8].CLK
+clk_50M => data[9].CLK
+clk_50M => data[10].CLK
+reset_n => data[0].ACLR
+reset_n => data[1].ACLR
+reset_n => data[2].ACLR
+reset_n => data[3].ACLR
+reset_n => data[4].ACLR
+reset_n => data[5].ACLR
+reset_n => data[6].ACLR
+reset_n => data[7].ACLR
+reset_n => data[8].ACLR
+reset_n => data[9].ACLR
+reset_n => data[10].ACLR
 enable => data.OUTPUTSELECT
 enable => data.OUTPUTSELECT
 enable => data.OUTPUTSELECT
@@ -278,26 +210,15 @@ load_en => data.OUTPUTSELECT
 load_en => data.OUTPUTSELECT
 load_en => data.OUTPUTSELECT
 load_en => data.OUTPUTSELECT
-out <= data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[0] <= data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[1] <= data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[2] <= data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[3] <= data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[4] <= data[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[5] <= data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[6] <= data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[7] <= data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[8] <= data[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[9] <= data[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data[10] <= data[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out <= data[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |hw1|rx_time_gen:timer
 clk_50M => count_enable.CLK
-clk_50M => ticked[0]~reg0.CLK
-clk_50M => ticked[1]~reg0.CLK
-clk_50M => ticked[2]~reg0.CLK
-clk_50M => ticked[3]~reg0.CLK
+clk_50M => ticked[0].CLK
+clk_50M => ticked[1].CLK
+clk_50M => ticked[2].CLK
+clk_50M => ticked[3].CLK
 clk_50M => tick~reg0.CLK
 clk_50M => counter[0].CLK
 clk_50M => counter[1].CLK
@@ -325,17 +246,13 @@ reset_n => counter[9].ACLR
 reset_n => counter[10].ACLR
 reset_n => counter[11].ACLR
 reset_n => counter[12].ACLR
-reset_n => ticked[0]~reg0.ACLR
-reset_n => ticked[1]~reg0.ACLR
-reset_n => ticked[2]~reg0.ACLR
-reset_n => ticked[3]~reg0.ACLR
 reset_n => tick~reg0.ACLR
+reset_n => ticked[0].ACLR
+reset_n => ticked[1].ACLR
+reset_n => ticked[2].ACLR
+reset_n => ticked[3].ACLR
 reset_n => count_enable.ACLR
-start => always2.IN1
-ticked[0] <= ticked[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ticked[1] <= ticked[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ticked[2] <= ticked[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ticked[3] <= ticked[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+start => always1.IN1
 tick <= tick~reg0.DB_MAX_OUTPUT_PORT_TYPE
 full <= count_enable.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -346,14 +263,22 @@ reset_n => reset_n.IN1
 tick => tick.IN1
 uart_rxd => uart_rxd.IN1
 full => read_error.IN1
-read_value[0] <= shift_reg_sipo:shift_register.data_out
-read_value[1] <= shift_reg_sipo:shift_register.data_out
-read_value[2] <= shift_reg_sipo:shift_register.data_out
-read_value[3] <= shift_reg_sipo:shift_register.data_out
-read_value[4] <= shift_reg_sipo:shift_register.data_out
-read_value[5] <= shift_reg_sipo:shift_register.data_out
-read_value[6] <= shift_reg_sipo:shift_register.data_out
-read_value[7] <= shift_reg_sipo:shift_register.data_out
+full => read_value.IN1
+full => read_value.IN1
+full => read_value.IN1
+full => read_value.IN1
+full => read_value.IN1
+full => read_value.IN1
+full => read_value.IN1
+full => read_value.IN1
+read_value[0] <= read_value.DB_MAX_OUTPUT_PORT_TYPE
+read_value[1] <= read_value.DB_MAX_OUTPUT_PORT_TYPE
+read_value[2] <= read_value.DB_MAX_OUTPUT_PORT_TYPE
+read_value[3] <= read_value.DB_MAX_OUTPUT_PORT_TYPE
+read_value[4] <= read_value.DB_MAX_OUTPUT_PORT_TYPE
+read_value[5] <= read_value.DB_MAX_OUTPUT_PORT_TYPE
+read_value[6] <= read_value.DB_MAX_OUTPUT_PORT_TYPE
+read_value[7] <= read_value.DB_MAX_OUTPUT_PORT_TYPE
 read_error <= read_error.DB_MAX_OUTPUT_PORT_TYPE
 
 
